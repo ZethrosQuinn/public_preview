@@ -1,0 +1,15 @@
+{
+  "wealth": 3,
+  "stability": 3,
+  "buildings": [],
+  "characters": [
+    {
+      "name": "Jeoffrey Klingleton",
+      "title": "Head Elder"
+    }
+  ],
+  "speaker": {
+    "name": "Jeoffrey Klingleton",
+    "title": "Head Elder"
+  }
+}
