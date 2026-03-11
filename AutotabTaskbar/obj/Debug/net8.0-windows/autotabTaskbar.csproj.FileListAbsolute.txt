@@ -1,0 +1,15 @@
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Debug\net8.0-windows\autotabTaskbar.exe
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Debug\net8.0-windows\autotabTaskbar.deps.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Debug\net8.0-windows\autotabTaskbar.runtimeconfig.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Debug\net8.0-windows\autotabTaskbar.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Debug\net8.0-windows\autotabTaskbar.pdb
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.AssemblyInfoInputs.cache
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.AssemblyInfo.cs
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.csproj.CoreCompileInputs.cache
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.sourcelink.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\refint\autotabTaskbar.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.pdb
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\autotabTaskbar.genruntimeconfig.cache
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\obj\Debug\net8.0-windows\ref\autotabTaskbar.dll

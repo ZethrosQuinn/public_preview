@@ -1,0 +1,5 @@
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Release\net8.0-windows\publish\autotabTaskbar.exe
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Release\net8.0-windows\publish\autotabTaskbar.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Release\net8.0-windows\publish\autotabTaskbar.deps.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Release\net8.0-windows\publish\autotabTaskbar.runtimeconfig.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\autotabTaskbar\bin\Release\net8.0-windows\publish\autotabTaskbar.pdb

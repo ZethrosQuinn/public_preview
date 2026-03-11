@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>valentine 💖</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("Valentines hearts.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #ffe6f0;
+            text-align: center;
+        }
+
+        img {
+            max-width: 600px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            width: 400px;
+            height: 140px;
+            margin: 0 auto;
+        }
+
+        .decoration {
+            position: fixed;
+            width: 120px;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+
+        button {
+            padding: 24px 48px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        #yesBtn {
+            background-color: #ff66a3;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #cccccc;
+            color: #333;
+        }
+
+        #startBtn {
+            padding: 28px 56px;
+            font-size: 22px;
+            background-color: #ff66a3;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 20px;
+            animation: floatUp 6s linear forwards;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+
+        .explosion-heart {
+            position: fixed;
+            font-size: 24px;
+            pointer-events: none;
+            animation: explode 1s ease-out forwards;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--x), var(--y)) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="startBtn">start 💖</button>
+
+    <div id="mainContent" style="display: none;">
+        <img src="valentines dog.jpg" alt="valentine image">
+        <img src="grumpy love.jpg" class="decoration" style="top: 40px; left: 270px;">
+        <img src="love you 1.jpg" class="decoration" style="bottom: 30px; right: 200px;">
+        <img src="love you 2.jpg" class="decoration" style="top: 140px; right: 160px;">
+
+        <h1 id="question">Will you be my Valentinesiversary Stink?</h1>
+
+        <div class="buttons">
+            <button id="yesBtn">yes</button>
+            <button id="noBtn">no</button>
+        </div>
+    </div>   
+
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+        const yesBtn = document.getElementById("yesBtn");
+
+        const noTexts = [
+            "No",
+            "Go away",
+            "leave me alone",
+            "not this",
+            "stay away",
+            "stop it",
+            "bad option"
+        ];
+
+        let noJumpCount = 0;
+        const MAX_NO_JUMPS = 10;
+
+        function startMusicOnce() {
+            if (!music || musicStarted) return;
+
+            music.play().catch(err => {
+                console.log("music blocked:", err);
+            });
+
+            musicStarted = true;
+        }
+
+        const startBtn = document.getElementById("startBtn");
+        const mainContent = document.getElementById("mainContent");
+        const music = document.getElementById("bgMusic");
+
+        startBtn.addEventListener("click", () => {
+            music.play().catch(err => {
+                console.log("music blocked:", err);
+            });
+
+            startBtn.remove();
+            mainContent.style.display = "";
+        });
+
+        // floating hearts
+        function spawnFloatingHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.textContent = "💖";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 8000);
+        }
+
+        setInterval(spawnFloatingHeart, 700);
+
+        function getCenter(el) {
+            const r = el.getBoundingClientRect();
+            return {
+                x: r.left + r.width / 2,
+                y: r.top + r.height / 2
+            };
+        }
+
+        let noBtnDetached = false;
+
+        document.addEventListener("mousemove", (e) => {
+            const noRect = noBtn.getBoundingClientRect();
+            const dx = e.clientX - (noRect.left + noRect.width / 2);
+            const dy = e.clientY - (noRect.top + noRect.height / 2);
+
+            if (Math.hypot(dx, dy) > 120) return;
+
+            // detach once
+            if (noBtn.style.position !== "fixed") {
+                noBtn.style.position = "fixed";
+            }
+
+            const viewportCenter = {
+                x: window.innerWidth / 2,
+                y: window.innerHeight / 2
+            };
+
+            const yesCenter = getCenter(yesBtn);
+
+            // === TWEAKABLE VALUES ===
+            const minX = 300;
+            const maxX = 700;
+            const minY = 80;
+            const maxY = 200;
+            const minDistanceFromYes = 150;
+            // =======================
+
+            let left, top;
+            let attempts = 0;
+
+            do {
+                const jumpX =
+                    (Math.random() * (maxX - minX) + minX) *
+                    (Math.random() < 0.5 ? -1 : 1);
+
+                const jumpY =
+                    (Math.random() * (maxY - minY) + minY) *
+                    (Math.random() < 0.5 ? -1 : 1);
+
+                left = viewportCenter.x + jumpX - noBtn.offsetWidth / 2;
+                top = viewportCenter.y + jumpY - noBtn.offsetHeight / 2;
+
+                const testCenter = {
+                    x: left + noBtn.offsetWidth / 2,
+                    y: top + noBtn.offsetHeight / 2
+                };
+
+                const distFromYes = Math.hypot(
+                    testCenter.x - yesCenter.x,
+                    testCenter.y - yesCenter.y
+                );
+
+                if (distFromYes >= minDistanceFromYes) break;
+
+                attempts++;
+            } while (attempts < 10);
+
+            // clamp to viewport
+            left = Math.max(0, Math.min(window.innerWidth - noBtn.offsetWidth, left));
+            top = Math.max(0, Math.min(window.innerHeight - noBtn.offsetHeight, top));
+
+            noBtn.style.left = left + "px";
+            noBtn.style.top = top + "px";
+
+            noBtn.textContent = noTexts[Math.floor(Math.random() * noTexts.length)];
+
+            noJumpCount++;
+
+            if (noJumpCount >= MAX_NO_JUMPS) {
+                showWhyScreen();
+                return;
+            }
+        });
+
+        yesBtn.addEventListener("click", () => {
+            for (let i = 0; i < 25; i++) {
+                const heart = document.createElement("div");
+                heart.className = "explosion-heart";
+                heart.textContent = "💖";
+                heart.style.left = "50vw";
+                heart.style.top = "50vh";
+                heart.style.setProperty("--x", `${Math.random() * 300 - 150}px`);
+                heart.style.setProperty("--y", `${Math.random() * 300 - 150}px`);
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 1000);
+            }
+
+            setTimeout(() => {
+                document.body.innerHTML = `
+                    <h1>Yay! Happy 2nd Anniversary and Valentine's Day! 🎉💖</h1>
+                    <audio id="yay" autoplay>
+                        <source src="yay.mp3" type="audio/mpeg">
+                    </audio>
+                `;
+            }, 800);
+        });
+
+        function showWhyScreen() {
+            document.body.innerHTML = `
+                <h1>Why you hate me? 💔</h1>
+                <button onclick="location.reload()">try again</button>
+            `;
+        }
+    </script>
+
+</body>
+</html>

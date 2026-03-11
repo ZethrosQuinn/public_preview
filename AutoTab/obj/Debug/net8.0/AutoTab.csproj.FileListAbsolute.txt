@@ -1,0 +1,29 @@
+C:\Users\ZacharySchmitz\source\repos\AutoTab\bin\Debug\net8.0\AutoTab.exe
+C:\Users\ZacharySchmitz\source\repos\AutoTab\bin\Debug\net8.0\AutoTab.deps.json
+C:\Users\ZacharySchmitz\source\repos\AutoTab\bin\Debug\net8.0\AutoTab.runtimeconfig.json
+C:\Users\ZacharySchmitz\source\repos\AutoTab\bin\Debug\net8.0\AutoTab.dll
+C:\Users\ZacharySchmitz\source\repos\AutoTab\bin\Debug\net8.0\AutoTab.pdb
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\AutoTab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\AutoTab.AssemblyInfoInputs.cache
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\AutoTab.AssemblyInfo.cs
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\AutoTab.csproj.CoreCompileInputs.cache
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\AutoTab.dll
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\refint\AutoTab.dll
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\AutoTab.pdb
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\AutoTab.genruntimeconfig.cache
+C:\Users\ZacharySchmitz\source\repos\AutoTab\obj\Debug\net8.0\ref\AutoTab.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\bin\Debug\net8.0\AutoTab.exe
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\bin\Debug\net8.0\AutoTab.deps.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\bin\Debug\net8.0\AutoTab.runtimeconfig.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\bin\Debug\net8.0\AutoTab.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\bin\Debug\net8.0\AutoTab.pdb
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.AssemblyInfoInputs.cache
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.AssemblyInfo.cs
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.csproj.CoreCompileInputs.cache
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.sourcelink.json
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\refint\AutoTab.dll
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.pdb
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\AutoTab.genruntimeconfig.cache
+C:\Users\ZacharySchmitz.AzureAD\source\repos\Allshare\Dev apps\AutoTab\obj\Debug\net8.0\ref\AutoTab.dll
